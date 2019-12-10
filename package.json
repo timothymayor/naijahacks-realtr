@@ -4,7 +4,8 @@
   "description": "An online crowdfunding site for investment in real estate",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,15 @@
   },
   "homepage": "https://github.com/adisen/naijahacks-realtr#readme",
   "dependencies": {
-    "concurrently": "^5.0.0",
-    "expresss": "0.0.0",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.14"
   },
   "devDependencies": {
+    "concurrently": "^5.0.1",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.1"
   }
