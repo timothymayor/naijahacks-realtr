@@ -1,0 +1,47 @@
+/** @format */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#showcase {
+  background-image: url('./assets/images/parallax1.png'),
+    linear-gradient(rgba(80, 17, 99, 0.418), rgb(80, 17, 99));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+input[type='text'] {
+  border: 1px solid white;
+  border-radius: ;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.btn-flat {
+  font-size: 10px;
+}
+
+p {
+  font-size: 12px;
+}
+
+h1,
+h4 {
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+.carousel-item {
+  width: 350px !important;
+  height: 200px !important;
+  padding: 1.5rem;
+  opacity: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
