@@ -52,37 +52,39 @@ const Login = ({ login, isAuthenticated }) => {
           <h3>
             <strong>Login!</strong>
           </h3>
-          <form style={{ width: '80%' }} onSubmit={e => onSubmit(e)}>
-            <div className='input-field col s12'>
-              <input
-                id='email'
-                type='text'
-                className='validate'
-                value={email}
-                onChange={e => onChange(e)}
-              />
-              <label htmlFor='email'>Email Address</label>
-            </div>
-            <div className='input-field col s12'>
-              <input
-                id='password'
-                type='password'
-                className='validate'
-                value={password}
-                onChange={e => onChange(e)}
-              />
-              <label htmlFor='password'>Password</label>
-            </div>
-            <p>
-              <label>
-                <input type='checkbox' className='filled-in' />
-                <span>Remember me</span>
-              </label>
-            </p>
-            <button className='waves-effect waves-light btn' type='submit'>
-              Login
-            </button>
-          </form>
+          <div className='row'>
+            <form className='col s12' onSubmit={e => onSubmit(e)}>
+              <div className='row'>
+                <div className='input-field col s12'>
+                  <input
+                    name='email'
+                    type='text'
+                    className='validate'
+                    value={email}
+                    required
+                    onChange={e => onChange(e)}
+                  />
+                  <label htmlFor='email'>Email Address</label>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='input-field col s12'>
+                  <input
+                    name='password'
+                    type='password'
+                    className='validate'
+                    value={password}
+                    required
+                    onChange={e => onChange(e)}
+                  />
+                  <label htmlFor='password'>Password</label>
+                </div>
+              </div>
+              <button type='submit' className='btn-flat black white-text'>
+                Sign In
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

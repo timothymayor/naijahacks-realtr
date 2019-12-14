@@ -97,8 +97,8 @@ const Signup = ({ setAlert, signup, isAuthenticated }) => {
             />
             <label htmlFor='password'>Confirm Password</label>
           </div>
-          <button className='waves-effect waves-light btn' type='submit'>
-            Sign up
+          <button type='submit' className='btn-flat black white-text'>
+            Sign Up
           </button>
         </form>
       </div>
@@ -116,4 +116,4 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps, { signup })(Signup);
+export default connect(mapStateToProps, { signup, setAlert })(Signup);

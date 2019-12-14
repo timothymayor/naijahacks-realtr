@@ -7,9 +7,6 @@ import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
-  const authLinks = {};
-
-  const guestLinks = {};
   return (
     <Fragment>
       <nav style={{ padding: '0 2rem' }} className='purple darken-4'>

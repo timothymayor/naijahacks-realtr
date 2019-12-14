@@ -143,7 +143,7 @@ const Landing = () => {
         className='purple darken-4 white-text'
         style={{ padding: '1.5rem 0' }}>
         <div className='container row '>
-          <div className='col l6 valign-wrapper'>
+          <div className='col s12 m12 l6 valign-wrapper'>
             <div>
               <h5>
                 <strong>Join our mailing list</strong>
@@ -151,7 +151,7 @@ const Landing = () => {
               <p>Sign up to get info into real estate and new listings</p>
             </div>
           </div>
-          <div className='col l6'>
+          <div className='col s12 m12 l6'>
             <div className='valign-wrapper'>
               <form className='input-field col s12 valign-wrapper'>
                 <input
@@ -178,13 +178,13 @@ const Landing = () => {
 
       <section className='container'>
         <h3>What people are saying...</h3>
-        <div class='carousel' style={{ height: '300px' }}>
-          <div class='carousel-item black-text' href='#one!'>
-            <div class='row valign-wrapper'>
-              <div class='col s2'>
-                <img src='' alt='' class='circle responsive-img' />
+        <div className='carousel' style={{ height: '300px' }}>
+          <div className='carousel-item black-text' href='#one!'>
+            <div className='row valign-wrapper'>
+              <div className='col s2'>
+                <img src='' alt='' className='circle responsive-img' />
               </div>
-              <div class='col s10'>
+              <div className='col s10'>
                 <h5>Adetunji Israel</h5>
                 <h6>Javasript Developer</h6>
               </div>
@@ -194,12 +194,12 @@ const Landing = () => {
               voluptatem ex veritatis aliquam doloremque labore.
             </p>
           </div>
-          <div class='carousel-item black-text' href='#one!'>
-            <div class='row valign-wrapper'>
-              <div class='col s2'>
-                <img src='' alt='' class='circle responsive-img' />
+          <div className='carousel-item black-text' href='#one!'>
+            <div className='row valign-wrapper'>
+              <div className='col s2'>
+                <img src='' alt='' className='circle responsive-img' />
               </div>
-              <div class='col s10'>
+              <div className='col s10'>
                 <h5>Adetunji Israel</h5>
                 <h6>Javasript Developer</h6>
               </div>
@@ -209,12 +209,12 @@ const Landing = () => {
               voluptatem ex veritatis aliquam doloremque labore.
             </p>
           </div>
-          <div class='carousel-item black-text' href='#one!'>
-            <div class='row valign-wrapper'>
-              <div class='col s2'>
-                <img src='' alt='' class='circle responsive-img' />
+          <div className='carousel-item black-text' href='#one!'>
+            <div className='row valign-wrapper'>
+              <div className='col s2'>
+                <img src='' alt='' className='circle responsive-img' />
               </div>
-              <div class='col s10'>
+              <div className='col s10'>
                 <h5>Adetunji Israel</h5>
                 <h6>Javasript Developer</h6>
               </div>
@@ -224,12 +224,12 @@ const Landing = () => {
               voluptatem ex veritatis aliquam doloremque labore.
             </p>
           </div>
-          <div class='carousel-item black-text' href='#one!'>
-            <div class='row valign-wrapper'>
-              <div class='col s2'>
-                <img src='' alt='' class='circle responsive-img' />
+          <div className='carousel-item black-text' href='#one!'>
+            <div className='row valign-wrapper'>
+              <div className='col s2'>
+                <img src='' alt='' className='circle responsive-img' />
               </div>
-              <div class='col s10'>
+              <div className='col s10'>
                 <h5>Adetunji Israel</h5>
                 <h6>Javasript Developer</h6>
               </div>
@@ -239,12 +239,12 @@ const Landing = () => {
               voluptatem ex veritatis aliquam doloremque labore.
             </p>
           </div>
-          <div class='carousel-item black-text' href='#one!'>
-            <div class='row valign-wrapper'>
-              <div class='col s2'>
-                <img src='' alt='' class='circle responsive-img' />
+          <div className='carousel-item black-text' href='#one!'>
+            <div className='row valign-wrapper'>
+              <div className='col s2'>
+                <img src='' alt='' className='circle responsive-img' />
               </div>
-              <div class='col s10'>
+              <div className='col s10'>
                 <h5>Adetunji Israel</h5>
                 <h6>Javasript Developer</h6>
               </div>
