@@ -15,70 +15,65 @@ const Landing = () => {
       <section className='valign-wrapper' id='showcase'>
         <div className='container left-align white-text'>
           <h1>Everyone can invest</h1>
-          <p>Real estate should not be for a few. It should be for all</p>
+          <h6>Real estate should not be for a few. It should be for all</h6>
           <Link
             to='/signup'
             className='btn-flat'
-            style={{ border: '2px solid #fff', color: '#fff' }}>
+            style={{
+              border: '2px solid #fff',
+              color: '#fff',
+              marginTop: '2rem'
+            }}>
             Create Account
           </Link>
         </div>
       </section>
 
-      <section style={{ height: '100vh', padding: '1.5rem 0' }}>
-        <div
-          className='row container valign-wrapper'
-          style={{ height: '40vh' }}>
+      <section style={{ margin: '2rem 0', padding: '2rem 0' }}>
+        <div className='row container valign-wrapper'>
           <div>
             <div className='col s12 m8 l4'>
               <i className='material-icons'>house</i>
-              <h6>
-                <strong>Real Estate for all</strong>
-              </h6>
+              <h5>Real Estate for all</h5>
               <p>
-                Hava access to high end properties developed and managed by
+                Have access to high end properties developed and managed by
                 industry professionals
               </p>
             </div>
             <div className='col s12 m8 l4'>
               <i className='material-icons'>attach_money</i>
-              <h6>
-                <strong>Affordable Investing</strong>
-              </h6>
+              <h5>Affordable Investing</h5>
               <p>
                 Invest with as low as #100000 and increase your returns by 200%
               </p>
             </div>
             <div className='col s12 m8 l4'>
               <i className='material-icons'>multiline_chart</i>
-              <h6>
-                <strong>No loss</strong>
-              </h6>
+              <h5>No loss</h5>
               <p>Your investments are insured to prevent or minimize loss</p>
             </div>
           </div>
         </div>
-        <div className='row container' style={{ height: '50vh' }}>
-          <div className='video-container col s6'>
-            <iframe
-              title='youtube'
-              width='853'
-              height='700'
-              src='https://www.youtube.com/watch?v=1gDhl4leEzA'
-              frameBorder='0'
-              allowFullScreen></iframe>
-          </div>
-          <div className='col s6'>
-            <h4 className='purple-text darken-4'>
-              <strong>
-                Everyone can now Invest. Real Estate is now all inclusive
-              </strong>
-            </h4>
-            <p>Real Estate should not be for a few, it should be for all</p>
-            <Link to='/signup' className='indigo darken-4 btn-flat white-text'>
-              Create Account
-            </Link>
-          </div>
+      </section>
+
+      <section className='row container' style={{ paddingBottom: '3rem' }}>
+        <div className='video-container col s12 l6'>
+          <iframe
+            title='youtube'
+            width='853'
+            height='700'
+            src='https://www.youtube.com/watch?v=1gDhl4leEzA'
+            frameBorder='0'
+            allowFullScreen></iframe>
+        </div>
+        <div className='col s12 l6'>
+          <h4 className='purple-text darken-4'>
+            Everyone can now Invest. Real Estate is now all inclusive
+          </h4>
+          <p>Real Estate should not be for a few, it should be for all</p>
+          <Link to='/signup' className='indigo darken-4 btn-flat white-text'>
+            Create Account
+          </Link>
         </div>
       </section>
 
@@ -86,7 +81,7 @@ const Landing = () => {
         className='purple darken-4 white-text'
         style={{ padding: '1.5rem' }}>
         <div className='container row valign-wrapper'>
-          <div className='col s8 l4'>
+          <div className='col s12 l4'>
             <i className='material-icons' style={{ fontSize: '12rem' }}>
               security
             </i>
@@ -109,39 +104,35 @@ const Landing = () => {
           <div>
             <div className='col s12 m8 l4'>
               <i className='material-icons'>house</i>
-              <h6>
-                <strong>Real Estate for all</strong>
-              </h6>
+              <h5 className='purple-text darken-4'>Sign up</h5>
               <p>
-                Hava access to high end properties developed and managed by
+                Have access to high end properties developed and managed by
                 industry professionals
               </p>
             </div>
             <div className='col s12 m8 l4'>
               <i className='material-icons'>attach_money</i>
-              <h6>
-                <strong>Affordable Investing</strong>
-              </h6>
+              <h5 className='purple-text darken-4'>Invest in Real Estate</h5>
               <p>
                 Invest with as low as #100000 and increase your returns by 200%
               </p>
             </div>
             <div className='col s12 m8 l4'>
               <i className='material-icons'>multiline_chart</i>
-              <h6>
-                <strong>No loss</strong>
-              </h6>
+              <h5 className='purple-text darken-4'>Monitor Investments</h5>
               <p>Your investments are insured to prevent or minimize loss</p>
             </div>
           </div>
+        </div>
+        <div className='center-align'>
           <Link
             to='/signup'
-            className='waves-effect waves-light btn-flat center'
+            className='waves-effect waves-light btn-flat center-align'
             style={{
-              border: '1px solid #000',
-              marginTop: '4rem',
+              border: '2px solid #000',
               width: '15rem',
-              display: 'block'
+              display: 'block',
+              margin: '0 auto 3rem'
             }}>
             Sign up
           </Link>
@@ -173,7 +164,7 @@ const Landing = () => {
                 <input
                   type='submit'
                   name='submit'
-                  className='btn white black-text'
+                  className='btn-flat white black-text'
                   style={{
                     boxSizing: 'border-box',
                     display: 'inline'
@@ -187,6 +178,83 @@ const Landing = () => {
 
       <section className='container'>
         <h3>What people are saying...</h3>
+        <div class='carousel' style={{ height: '300px' }}>
+          <div class='carousel-item black-text' href='#one!'>
+            <div class='row valign-wrapper'>
+              <div class='col s2'>
+                <img src='' alt='' class='circle responsive-img' />
+              </div>
+              <div class='col s10'>
+                <h5>Adetunji Israel</h5>
+                <h6>Javasript Developer</h6>
+              </div>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+              voluptatem ex veritatis aliquam doloremque labore.
+            </p>
+          </div>
+          <div class='carousel-item black-text' href='#one!'>
+            <div class='row valign-wrapper'>
+              <div class='col s2'>
+                <img src='' alt='' class='circle responsive-img' />
+              </div>
+              <div class='col s10'>
+                <h5>Adetunji Israel</h5>
+                <h6>Javasript Developer</h6>
+              </div>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+              voluptatem ex veritatis aliquam doloremque labore.
+            </p>
+          </div>
+          <div class='carousel-item black-text' href='#one!'>
+            <div class='row valign-wrapper'>
+              <div class='col s2'>
+                <img src='' alt='' class='circle responsive-img' />
+              </div>
+              <div class='col s10'>
+                <h5>Adetunji Israel</h5>
+                <h6>Javasript Developer</h6>
+              </div>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+              voluptatem ex veritatis aliquam doloremque labore.
+            </p>
+          </div>
+          <div class='carousel-item black-text' href='#one!'>
+            <div class='row valign-wrapper'>
+              <div class='col s2'>
+                <img src='' alt='' class='circle responsive-img' />
+              </div>
+              <div class='col s10'>
+                <h5>Adetunji Israel</h5>
+                <h6>Javasript Developer</h6>
+              </div>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+              voluptatem ex veritatis aliquam doloremque labore.
+            </p>
+          </div>
+          <div class='carousel-item black-text' href='#one!'>
+            <div class='row valign-wrapper'>
+              <div class='col s2'>
+                <img src='' alt='' class='circle responsive-img' />
+              </div>
+              <div class='col s10'>
+                <h5>Adetunji Israel</h5>
+                <h6>Javasript Developer</h6>
+              </div>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+              voluptatem ex veritatis aliquam doloremque labore.
+            </p>
+          </div>
+        </div>
       </section>
     </Fragment>
   );

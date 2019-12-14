@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 // Redux
 import { connect } from 'react-redux';
@@ -11,7 +12,7 @@ import { setAlert } from '../../actions/alert';
 // Custom Import
 import Image from '../../assets/images/login.png';
 
-const Signup = ({ setAlert, signup }) => {
+const Signup = ({ setAlert, signup, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,12 +35,20 @@ const Signup = ({ setAlert, signup }) => {
 
   const { name, email, password, password2 } = formData;
 
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
+
   return (
     <div className='row valign-wrapper' style={{ height: '90vh', margin: '0' }}>
-      <div className='col s6' style={{ padding: '0', height: '100%' }}>
+      <div
+        className='col m6  l6 hide-on-small-only'
+        style={{ padding: '0', height: '100%' }}>
         <img src={Image} alt='shsh' style={{ height: '100%', width: '100%' }} />
       </div>
-      <div className='col s6 login-form container'>
+      <div
+        className='col s12 m6 l6  login-form container'
+        style={{ padding: '0 3rem' }}>
         <h3>
           <strong>Signup!</strong>
         </h3>
@@ -99,7 +108,12 @@ const Signup = ({ setAlert, signup }) => {
 
 Signup.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  signup: PropTypes.func.isRequired
+  signup: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 };
 
-export default connect(null, { setAlert, signup })(Signup);
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { signup })(Signup);

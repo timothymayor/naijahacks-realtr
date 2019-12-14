@@ -9,6 +9,8 @@ import './App.css';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import { loadUser } from './actions/auth';
+import setAuthToken from './utils/setAuthToken';
 
 // Custom components
 import Navbar from './components/layout/Navbar';
@@ -18,11 +20,16 @@ import Signup from './components/pages/Signup';
 import Footer from './components/layout/Footer';
 import Alert from './components/layout/Alert';
 
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
+
 const App = () => {
   // Initializes materialize JS
   useEffect(() => {
     M.AutoInit();
-  });
+    store.dispatch(loadUser());
+  }, []);
 
   return (
     <Provider store={store}>

@@ -1,10 +1,16 @@
 /** @format */
 
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
+
+// Redux
+import { connect } from 'react-redux';
+import { login } from '../../actions/auth';
 
 import Image from '../../assets/images/login.png';
 
-const Login = () => {
+const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -16,20 +22,33 @@ const Login = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+    login(email, password);
   };
 
   const { email, password } = formData;
+
+  // Redirect if Logged in
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
+
   return (
     <section>
-      <div className='row valign-wrapper' style={{height: '90vh', margin:'0'}}>
-        <div className='col s6' style={{padding:'0', height:'100%'}}>
+      <div
+        className='row valign-wrapper'
+        style={{ height: '90vh', margin: '0' }}>
+        <div
+          className='col m6  l6 hide-on-small-only'
+          style={{ padding: '0', height: '100%' }}>
           <img
             src={Image}
             alt='shsh'
             style={{ height: '100%', width: '100%' }}
           />
         </div>
-        <div className='col s6 login-form container'>
+        <div
+          className='col s12 m6 l6 login-form container'
+          style={{ padding: '0 3rem' }}>
           <h3>
             <strong>Login!</strong>
           </h3>
@@ -70,4 +89,13 @@ const Login = () => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { login })(Login);
