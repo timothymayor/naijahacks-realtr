@@ -2,8 +2,14 @@
 
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../../actions/auth';
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, loading }, logout) => {
+  const authLinks = {};
+
+  const guestLinks = {};
   return (
     <Fragment>
       <nav style={{ padding: '0 2rem' }} className='purple darken-4'>
@@ -57,8 +63,8 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <Link to='#' data-target='mobile-demo' class='sidenav-trigger'>
-            <i class='material-icons'>menu</i>
+          <Link to='#' data-target='mobile-demo' className='sidenav-trigger'>
+            <i className='material-icons'>menu</i>
           </Link>
         </div>
       </nav>
@@ -100,4 +106,13 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = {
+  auth: state.auth
+};
+
+export default connect(mapStateToProps, { logout })(Navbar);
